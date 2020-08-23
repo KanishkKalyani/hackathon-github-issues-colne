@@ -100,7 +100,6 @@ class IssuesPage extends Component {
 					this.setState({
 						issues: resp.data.issues,
 					});
-					console.log(`GETTING ALL ISSUES`, this.state.issues);
 				})
 				.catch(() => {
 					toast.error(`Failed to get data from Database`);
@@ -133,8 +132,6 @@ class IssuesPage extends Component {
 		const { id } = e.target;
 
 		const index = issues.findIndex(issue => issue._id === id);
-
-		console.log(index);
 
 		this.props.history.push({
 			pathname: "/edit-issue",
@@ -180,7 +177,6 @@ class IssuesPage extends Component {
 			this.getNumOfPages();
 		} else {
 			isClosed = filter === "OPEN" ? false : true;
-			console.log(`GETTING isClosed = ${isClosed} ISSUES`);
 
 			this.getStatusNumOfPages(isClosed);
 

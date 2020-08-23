@@ -4,6 +4,7 @@ import { toast, ToastContainer, Zoom } from "react-toastify";
 import { trackPromise } from "react-promise-tracker";
 import { Spinner } from "./Spinner";
 import "../styles/AddIssueForm.css";
+import "../styles/EditIssueForm.css";
 
 class EditIssueForm extends Component {
 	constructor(props) {
@@ -63,7 +64,7 @@ class EditIssueForm extends Component {
 	render() {
 		const { userName, data, submitButton } = this.state;
 		return (
-			<div className="form-container">
+			<div className="form-container form-container-1">
 				<Spinner area="update-issue" />
 				<ToastContainer draggable={false} transition={Zoom} autoClose={2000} />
 				<abbr title="Back to Issues Page">
