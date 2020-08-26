@@ -11,7 +11,7 @@ class AddIssueForm extends Component {
 		this.state = {
 			userName: "",
 			data: "",
-			submitButton: "ADD QUERY",
+			submitButton: "ADD ISSUE",
 		};
 	}
 
@@ -31,7 +31,7 @@ class AddIssueForm extends Component {
 
 		const { userName, data } = this.state;
 
-		this.setState({ submitButton: "ADDING QUERY..." });
+		this.setState({ submitButton: "ADDING ISSUE..." });
 
 		trackPromise(
 			axios
@@ -44,7 +44,7 @@ class AddIssueForm extends Component {
 					this.setState({
 						userName: "",
 						data: "",
-						submitButton: "ADD QUERY",
+						submitButton: "ADD ISSUE",
 					});
 				})
 				.catch(err => {
@@ -53,7 +53,7 @@ class AddIssueForm extends Component {
 					} else {
 						toast.error(`Failed to add Issue`);
 					}
-					this.setState({ submitButton: "ADD QUERY" });
+					this.setState({ submitButton: "ADD ISSUE" });
 				}),
 			"add-issue"
 		);
