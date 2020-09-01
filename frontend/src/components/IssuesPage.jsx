@@ -237,6 +237,9 @@ class IssuesPage extends Component {
 				<div className="all-issues-container">
 					{issues.map(issue => (
 						<div key={issue._id} className="issue-body">
+							<div className="issue-exclamation">
+								<img src="https://img.icons8.com/emoji/28/000000/exclamation-mark-emoji.png" />
+							</div>
 							<div className="issue-data">{issue.data}</div>
 							<div className="issue-username-dropdown-wrapper">
 								<div className="issue-username">{issue.userName}</div>
